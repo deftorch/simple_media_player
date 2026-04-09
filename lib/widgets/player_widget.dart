@@ -11,7 +11,7 @@ class PlayerWidget extends StatefulWidget {
   State<PlayerWidget> createState() => _PlayerWidgetState();
 }
 
-// ==== [BAGIAN KODE UNTUK PRESENTASI MAHASISWA 3] ====
+// RIO
 // Ini adalah logika pemutaran media menggunakan paket video_player
 class _PlayerWidgetState extends State<PlayerWidget> {
   late VideoPlayerController _controller;

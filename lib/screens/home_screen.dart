@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
 import '../widgets/player_widget.dart';
-import 'auto_detect_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -47,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
-  // ==== [BAGIAN KODE UNTUK PRESENTASI MAHASISWA 2] ====
+  // AAL
   // Fungsi ini bertugas membuka galeri/file manager untuk memilih file media
   Future<void> _pickFile() async {
     FilePickerResult? result = await FilePicker.pickFiles(
@@ -63,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
   // =======================================================
 
-  // ==== [BAGIAN KODE UNTUK PRESENTASI MAHASISWA 1] ====
+  // HAIDAR
   // Membangun Antarmuka Pengguna (UI) Utama Aplikasi
   @override
   Widget build(BuildContext context) {
@@ -104,32 +103,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   backgroundColor: Theme.of(context).colorScheme.primaryContainer,
-                ),
-              ),
-            ),
-            // Tombol Auto Detect Media
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 8.0),
-              child: ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AutoDetectScreen(
-                        onMediaSelected: (file) {
-                          setState(() {
-                            _selectedFile = file;
-                          });
-                        },
-                      ),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.library_music),
-                label: const Text('Auto Detect Media / Lagu', style: TextStyle(fontSize: 16)),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-                  backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
                 ),
               ),
             ),
